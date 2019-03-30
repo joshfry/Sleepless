@@ -38,7 +38,7 @@ const IndexPage = props => (
         </div>
       </div>
       <div className="hero">
-        <Img fluid={props.data.hero.childImageSharp.fluid} />
+        <Img fluid={props.data.hero.childImageSharp.fluid} fadeIn={false} />
       </div>
     </div>
     <div className="section section--padded">

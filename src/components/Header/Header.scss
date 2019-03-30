@@ -1,0 +1,9 @@
+.Header {
+  &__brand {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    opacity: 0;
+  }
+}

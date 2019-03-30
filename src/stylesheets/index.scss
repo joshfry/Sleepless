@@ -3,7 +3,9 @@
 @import 'base/index';
 
 .section {
-  min-height: 100vh;
+  &--fullHeight {
+    min-height: 100vh;
+  }
 
   &--padded {
     padding-top: em(60);

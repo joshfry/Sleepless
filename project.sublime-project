@@ -1,0 +1,22 @@
+{
+	"folders":
+	[
+    {
+      "file_exclude_patterns": [
+        "*.log",
+        ".new-component-config.json",
+        "package-lock.json",
+        // "*.sublime-project",
+        "*.sublime-workspace",
+        "LICENSE",
+      ],
+      "folder_exclude_patterns": [
+        "__docs__",
+        ".cache",
+        "node_modules",
+        "public"
+      ],
+      "path": ".",
+    }
+	]
+}

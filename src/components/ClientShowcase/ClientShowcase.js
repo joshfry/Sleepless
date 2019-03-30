@@ -1,10 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { withPrefix, Link } from 'gatsby';
 
-import { CLIENTS } from 'constants';
 import './ClientShowcase.scss';
 
-const ClientShowcase = () => {
+const ClientShowcase = props => {
   const {
     clientName,
     projectDescription,
@@ -12,20 +12,29 @@ const ClientShowcase = () => {
     builtOn,
     screenshot,
     productImg,
-  } = CLIENTS.tepui;
+    align,
+    style,
+  } = props;
+
+  let alignClassName = `ClientShowcase--left`;
+  if (align === `right`) alignClassName = `ClientShowcase--right`;
 
   return (
-    <div className="ClientShowcase">
+    <div className={`ClientShowcase ${alignClassName}`} style={style}>
       <div className="ClientShowcase__content">
         <h3 className="ClientShowcase__title">{clientName}</h3>
         <p className="ClientShowcase__description">{projectDescription}</p>
-        <Link className="ClientShowcase__projectUrl" to={projectUrl}>
-          View Project
-        </Link>
-        <div className="ClientShowcase__builtOn">{builtOn}</div>
-        <div className="ClientShowcase__productImg">
-          <img src={withPrefix(productImg)} alt={`${clientName} product`} />
+        <div className="ClientShowcase__actions">
+          <Link className="ClientShowcase__projectUrl" to={projectUrl}>
+            View Project
+          </Link>
+          <div className="ClientShowcase__builtOn">{builtOn}</div>
         </div>
+        {productImg ? (
+          <div className="ClientShowcase__productImg">
+            <img src={withPrefix(productImg)} alt={`${clientName} product`} />
+          </div>
+        ) : null}
       </div>
       <div className="ClientShowcase__screenshot">
         <img
@@ -35,6 +44,23 @@ const ClientShowcase = () => {
       </div>
     </div>
   );
+};
+
+ClientShowcase.propTypes = {
+  clientName: PropTypes.string.isRequired,
+  projectDescription: PropTypes.string.isRequired,
+  projectUrl: PropTypes.string.isRequired,
+  builtOn: PropTypes.string.isRequired,
+  screenshot: PropTypes.string.isRequired,
+  productImg: PropTypes.string,
+  align: PropTypes.string,
+  style: PropTypes.object, // eslint-disable-line
+};
+
+ClientShowcase.defaultProps = {
+  productImg: ``,
+  align: `left`,
+  style: {},
 };
 
 export default ClientShowcase;

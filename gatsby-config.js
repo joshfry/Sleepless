@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  pathPrefix: `/img`,
   siteMetadata: {
     title: `Sleepless Media`,
     description: `Sleepless is a Shopify Plus web design agency in Santa Cruz, California specializing in custom websites, branding & ecommerce.`,
@@ -20,6 +21,7 @@ module.exports = {
       options: {
         src: path.join(__dirname, 'src'),
         components: path.join(__dirname, 'src/components'),
+        constants: path.join(__dirname, 'src/constants'),
         images: path.join(__dirname, 'src/images'),
         pages: path.join(__dirname, 'src/pages'),
         templates: path.join(__dirname, 'src/templates'),

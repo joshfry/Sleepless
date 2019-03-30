@@ -1,0 +1,12 @@
+$showMediaQueries: true;
+
+// BASE
+$browserFontSize: 16;
+$baseFontSize: (16 / $browserFontSize) + em;
+$baseLineHeight: 1.5;
+
+// COLORS
+$black: #151515;
+$white: #ffffff;
+$gray: #595959;
+$primary: #b0976d;

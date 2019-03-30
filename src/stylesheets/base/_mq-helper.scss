@@ -1,0 +1,32 @@
+// https://www.joshfry.me/blog/2013/12/06/sass-media-query-helper-for-designers/
+
+@if $showMediaQueries == true {
+  $display_min: 30em;
+  $display_max: 300em;
+  $increment_by: 5em;
+
+  $start: floor($display_min/$increment_by);
+  $finish: floor($display_max/$increment_by);
+
+  body {
+    &:before {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      z-index: 9999;
+      padding: 14px 12px;
+      font-size: 14px;
+      line-height: 0;
+      font-family: monospace;
+      color: #20d832;
+      background: rgba(0, 0, 0, 0.8);
+
+      @for $i from $start through $finish {
+        @media (min-width: #{$i * $increment_by}) {
+          // content: "@media(min-width: #{$i * $increment_by})";
+          content: '#{$i * $increment_by}';
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+$emBase: 16 !default;
+
+@function em($pxval, $base: $emBase) {
+  @return ($pxval / $base) * 1em;
+}

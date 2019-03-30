@@ -1,0 +1,60 @@
+html {
+  height: 100%;
+  font-size: 100%;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  // font-family: 'Helvetica Neue', 'Calibri Light', Roboto, sans-serif;
+  @include sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  height: 100%;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  color: $white;
+  background-color: $black;
+
+  /*
+    Use this to bump up font size on larger screens
+  */
+  // @media (min-width: 1200px) {
+  //   background-color: red !important;
+  //   font-size: em($emBase * (20 / $emBase));
+  // }
+}
+
+img,
+canvas,
+iframe,
+video,
+svg {
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &.ul {
+    padding-left: 2.5rem;
+    margin-bottom: 2rem;
+    list-style: disc;
+  }
+}

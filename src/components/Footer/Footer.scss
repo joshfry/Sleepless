@@ -1,0 +1,16 @@
+@import '../../stylesheets/helpers.scss';
+
+$gray: #595959 !default;
+
+.Footer {
+  @include vhc;
+  box-sizing: content-box;
+  padding-bottom: 20px;
+  min-height: em(80);
+  text-align: center;
+
+  &__copy {
+    color: $gray;
+    font-size: em(12);
+  }
+}

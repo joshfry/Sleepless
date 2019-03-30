@@ -18,11 +18,11 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <React.Fragment>
+      <div className="Layout">
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <Footer siteTitle={data.site.siteMetadata.title} />
-      </React.Fragment>
+      </div>
     )}
   />
 );

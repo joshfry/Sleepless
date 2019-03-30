@@ -1,0 +1,12 @@
+// Vertically and Horizontally Centered
+
+@mixin vhc {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+@mixin vc {
+  @include flexbox;
+  @include align-items(center);
+}

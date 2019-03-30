@@ -56,8 +56,10 @@
   }
 
   &__projectUrl {
+    @include flex(1);
   }
 
   &__builtOn {
+    @include flex(1);
   }
 }

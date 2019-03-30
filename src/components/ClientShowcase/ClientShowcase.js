@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withPrefix, Link } from 'gatsby';
 
+import ShopifyBadge from 'components/ShopifyBadge';
 import './ClientShowcase.scss';
 
 const ClientShowcase = props => {
@@ -28,7 +29,9 @@ const ClientShowcase = props => {
           <Link className="ClientShowcase__projectUrl" to={projectUrl}>
             View Project
           </Link>
-          <div className="ClientShowcase__builtOn">{builtOn}</div>
+          <div className="ClientShowcase__builtOn">
+            <ShopifyBadge type={builtOn} />
+          </div>
         </div>
         {productImg ? (
           <div className="ClientShowcase__productImg">

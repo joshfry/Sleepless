@@ -17,7 +17,9 @@ const TestimonialsSection = () => {
           Yeah, <span>there’s more…</span>
         </SectionTitle>
         <img src={moreFriends} alt="More friends" />
-        <button className="TestimonialsSection__viewAllBtn">View All</button>
+        <button className="TestimonialsSection__viewAllBtn" type="button">
+          View All
+        </button>
       </Container>
     </div>
   );

@@ -1,6 +1,51 @@
 @import '../../stylesheets/helpers.scss';
 
 .TestimonialsSection {
+  position: relative;
+  padding-top: em(120);
+
+  &:before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -30vh;
+    height: 150vh;
+    background: {
+      image: url(../../images/starry-bg-4.jpg);
+      size: cover;
+      position: center top;
+      repeat: no-repeat;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: em(240);
+    background-color: red;
+    z-index: -1;
+    background: -moz-linear-gradient(
+      top,
+      rgba(21, 21, 21, 1) 0%,
+      rgba(21, 21, 21, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(21, 21, 21, 1) 0%,
+      rgba(21, 21, 21, 0) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(21, 21, 21, 1) 0%,
+      rgba(21, 21, 21, 0) 100%
+    );
+  }
+
   &__viewAllBtn {
     $fs: 25;
     @include serif;

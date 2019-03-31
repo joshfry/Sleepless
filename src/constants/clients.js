@@ -17,7 +17,7 @@ const CLIENTS = {
     builtOn: 'shopify',
     screenshot: '/lumecube-screenshot.jpg',
     productImg: '/lumecube-product-image.png',
-    bgImage: 'bg-ice.jpg',
+    bgImage: 'bg-ice.png',
   },
   august: {
     clientName: 'August',

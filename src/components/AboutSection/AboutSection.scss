@@ -26,7 +26,7 @@
     position: relative;
     padding-top: em(20, $fs);
     padding-bottom: em(20, $fs);
-    background-color: $black;
+    // background-color: $black;
   }
 
   &:before {
@@ -34,10 +34,55 @@
     position: absolute;
     top: 0;
     left: 50%;
-    bottom: 0;
+    bottom: 70%;
     width: 1px;
     margin-left: -1px; // should be half of width but that would be .5px
     background-color: $white;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    top: 70%;
+    width: 1px;
+    margin-left: -1px; // should be half of width but that would be .5px
+    background-color: $white;
+  }
+}
+
+.Scoped {
+  &:before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -60vh;
+    height: 200vh;
+    background: {
+      image: url(../../images/starry-bg-1.jpg);
+      size: cover;
+      position: center top;
+      repeat: no-repeat;
+    }
+  }
+
+  &:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 150vh;
+    height: 150vh;
+    background: {
+      image: url(../../images/starry-bg-2.jpg);
+      size: cover;
+      position: center center;
+      repeat: no-repeat;
+    }
   }
 }
 

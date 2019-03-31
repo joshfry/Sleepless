@@ -24,62 +24,64 @@ const AboutSection = () => {
           <span>Scope out the Goods</span>
         </h2>
 
-        <div className="grid grid--5-col">
-          <div className="grid__item">
-            <div className="ScopedGood">
-              <div
-                className="ScopedGood__image"
-                style={{ backgroundImage: `url(${iconDesign})` }}
-              />
-              <h4 className="ScopedGood__title">
-                Website
-                <br />
-                Design
-              </h4>
+        <div className="Scoped">
+          <div className="grid grid--5-col">
+            <div className="grid__item">
+              <div className="ScopedGood">
+                <div
+                  className="ScopedGood__image"
+                  style={{ backgroundImage: `url(${iconDesign})` }}
+                />
+                <h4 className="ScopedGood__title">
+                  Website
+                  <br />
+                  Design
+                </h4>
+              </div>
             </div>
-          </div>
-          <div className="grid__item">
-            <div className="ScopedGood">
-              <div
-                className="ScopedGood__image"
-                style={{ backgroundImage: `url(${iconShop})` }}
-              />
-              <h4 className="ScopedGood__title">
-                Shopify
-                <br />
-                Ecommerce
-              </h4>
+            <div className="grid__item">
+              <div className="ScopedGood">
+                <div
+                  className="ScopedGood__image"
+                  style={{ backgroundImage: `url(${iconShop})` }}
+                />
+                <h4 className="ScopedGood__title">
+                  Shopify
+                  <br />
+                  Ecommerce
+                </h4>
+              </div>
             </div>
-          </div>
-          <div className="grid__item">
-            <div className="ScopedGood">
-              <div
-                className="ScopedGood__image"
-                style={{ backgroundImage: `url(${iconCms})` }}
-              />
-              <h4 className="ScopedGood__title">Wordpress</h4>
+            <div className="grid__item">
+              <div className="ScopedGood">
+                <div
+                  className="ScopedGood__image"
+                  style={{ backgroundImage: `url(${iconCms})` }}
+                />
+                <h4 className="ScopedGood__title">Wordpress</h4>
+              </div>
             </div>
-          </div>
-          <div className="grid__item">
-            <div className="ScopedGood">
-              <div
-                className="ScopedGood__image"
-                style={{ backgroundImage: `url(${iconBrand})` }}
-              />
-              <h4 className="ScopedGood__title">Branding</h4>
+            <div className="grid__item">
+              <div className="ScopedGood">
+                <div
+                  className="ScopedGood__image"
+                  style={{ backgroundImage: `url(${iconBrand})` }}
+                />
+                <h4 className="ScopedGood__title">Branding</h4>
+              </div>
             </div>
-          </div>
-          <div className="grid__item">
-            <div className="ScopedGood">
-              <div
-                className="ScopedGood__image"
-                style={{ backgroundImage: `url(${iconContent})` }}
-              />
-              <h4 className="ScopedGood__title">
-                Content
-                <br />
-                Creation
-              </h4>
+            <div className="grid__item">
+              <div className="ScopedGood">
+                <div
+                  className="ScopedGood__image"
+                  style={{ backgroundImage: `url(${iconContent})` }}
+                />
+                <h4 className="ScopedGood__title">
+                  Content
+                  <br />
+                  Creation
+                </h4>
+              </div>
             </div>
           </div>
         </div>

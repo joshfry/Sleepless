@@ -2,13 +2,14 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
+import Container from 'components/Container';
 import roosterLogo from 'images/rooster-logo.svg';
 
 const HeroSection = () => {
   return (
     <div className="section section--fullHeight section--one">
       <div className="brand-statement">
-        <div className="container">
+        <Container>
           <div className="rooster-logo">
             <img src={roosterLogo} alt="Sleepless Media logo" />
           </div>
@@ -27,7 +28,7 @@ const HeroSection = () => {
               custom solutions built for results
             </span>
           </div>
-        </div>
+        </Container>
       </div>
       <div className="hero">
         <StaticQuery

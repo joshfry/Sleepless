@@ -1,0 +1,9 @@
+@import '../../stylesheets/helpers.scss';
+
+.Container {
+  @include module;
+  margin: 0 auto;
+  max-width: em(1260);
+  padding-left: em(30);
+  padding-right: em(30);
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withPrefix, Link } from 'gatsby';
 
+import Container from 'components/Container';
 import ShopifyBadge from 'components/ShopifyBadge';
 import './ClientShowcase.scss';
 
@@ -21,33 +22,35 @@ const ClientShowcase = props => {
   if (align === `right`) alignClassName = `ClientShowcase--right`;
 
   return (
-    <div className={`ClientShowcase ${alignClassName}`} style={style}>
-      <div className="ClientShowcase__content">
-        <h3 className="ClientShowcase__title">{clientName}</h3>
-        <p className="ClientShowcase__description">{projectDescription}</p>
-        <div className="ClientShowcase__actions">
-          <div className="ClientShowcase__projectUrl">
-            <Link className="btn" to={projectUrl}>
-              View Project
-            </Link>
+    <Container>
+      <div className={`ClientShowcase ${alignClassName}`} style={style}>
+        <div className="ClientShowcase__content">
+          <h3 className="ClientShowcase__title">{clientName}</h3>
+          <p className="ClientShowcase__description">{projectDescription}</p>
+          <div className="ClientShowcase__actions">
+            <div className="ClientShowcase__projectUrl">
+              <Link className="btn" to={projectUrl}>
+                View Project
+              </Link>
+            </div>
+            <div className="ClientShowcase__builtOn">
+              <ShopifyBadge type={builtOn} />
+            </div>
           </div>
-          <div className="ClientShowcase__builtOn">
-            <ShopifyBadge type={builtOn} />
-          </div>
+          {productImg ? (
+            <div className="ClientShowcase__productImg">
+              <img src={withPrefix(productImg)} alt={`${clientName} product`} />
+            </div>
+          ) : null}
         </div>
-        {productImg ? (
-          <div className="ClientShowcase__productImg">
-            <img src={withPrefix(productImg)} alt={`${clientName} product`} />
-          </div>
-        ) : null}
+        <div className="ClientShowcase__screenshot">
+          <img
+            src={withPrefix(screenshot)}
+            alt={`${clientName} website screenshot`}
+          />
+        </div>
       </div>
-      <div className="ClientShowcase__screenshot">
-        <img
-          src={withPrefix(screenshot)}
-          alt={`${clientName} website screenshot`}
-        />
-      </div>
-    </div>
+    </Container>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Container from 'components/Container';
 import iconBrand from 'images/icon-brand.png';
 import iconCms from 'images/icon-cms.png';
 import iconContent from 'images/icon-content.png';
@@ -9,7 +10,7 @@ import iconShop from 'images/icon-shop.png';
 const AboutSection = () => {
   return (
     <div className="section section--fullHeight section--padded">
-      <div className="container">
+      <Container>
         <p className="intro">
           We’re an outdoor-loving, music-rocking, coffee-inhaling web design and
           branding agency based in Santa Cruz, California. We’re super serious
@@ -79,7 +80,7 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

@@ -74,14 +74,6 @@
   pointer-events: none;
 }
 
-.container {
-  @include module;
-  margin: 0 auto;
-  max-width: em(1200);
-  padding-left: em(30);
-  padding-right: em(30);
-}
-
 .rooster-logo {
   @include vhc;
   padding-top: em(20);
@@ -247,5 +239,21 @@
     transform: scale(1.025);
     background-color: darken($primary, 45);
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+}
+
+.ShopifyPlusExpertsPanel {
+  @include vhc;
+  @include flex-direction(column);
+  min-height: 100vh;
+  background: {
+    size: cover;
+    repeat: no-repeat;
+    position: center center;
+  }
+
+  &__logo {
+    max-width: em(300);
+    margin: 0 auto;
   }
 }

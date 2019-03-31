@@ -46,9 +46,9 @@
 
   &__description {
     $fs: 16;
+    margin-bottom: 0;
     font-size: em($fs);
     line-height: 32 / $fs;
-    margin-bottom: 0;
   }
 
   &__actions {

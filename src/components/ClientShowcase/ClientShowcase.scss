@@ -48,6 +48,7 @@
     $fs: 16;
     font-size: em($fs);
     line-height: 32 / $fs;
+    margin-bottom: 0;
   }
 
   &__actions {
@@ -56,10 +57,10 @@
   }
 
   &__projectUrl {
-    @include flex(1);
+    margin-right: em(60);
   }
 
   &__builtOn {
-    @include flex(1);
+    max-width: em(150);
   }
 }

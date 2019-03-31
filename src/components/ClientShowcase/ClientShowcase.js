@@ -26,9 +26,11 @@ const ClientShowcase = props => {
         <h3 className="ClientShowcase__title">{clientName}</h3>
         <p className="ClientShowcase__description">{projectDescription}</p>
         <div className="ClientShowcase__actions">
-          <Link className="ClientShowcase__projectUrl" to={projectUrl}>
-            View Project
-          </Link>
+          <div className="ClientShowcase__projectUrl">
+            <Link className="btn" to={projectUrl}>
+              View Project
+            </Link>
+          </div>
           <div className="ClientShowcase__builtOn">
             <ShopifyBadge type={builtOn} />
           </div>

@@ -1,11 +1,13 @@
 import React from 'react';
-
+// components
 import Layout from 'components/Layout';
 import SEO from 'components/Seo';
 import HeroSection from 'components/HeroSection';
 import AboutSection from 'components/AboutSection';
 import ClientShowcase from 'components/ClientShowcase';
-import ShopifyPlusExpertsPanel from 'components/ShopifyPlusExpertsPanel';
+import ContactSection from 'components/ContactSection';
+import ShopifySection from 'components/ShopifySection';
+// assets
 import CLIENTS from 'constants/clients';
 
 const IndexPage = () => (
@@ -15,9 +17,10 @@ const IndexPage = () => (
     <AboutSection />
     <ClientShowcase {...CLIENTS.tepui} style={{ paddingTop: `60px` }} />
     <ClientShowcase {...CLIENTS.lumecube} align="right" />
-    <ShopifyPlusExpertsPanel />
+    <ShopifySection />
     <ClientShowcase {...CLIENTS.august} />
     <ClientShowcase {...CLIENTS.zpacks} align="right" />
+    <ContactSection />
   </Layout>
 );
 

@@ -4,17 +4,17 @@ import Container from 'components/Container';
 import IntroText from 'components/IntroText';
 // assets
 import shopifyPlusExperts from 'images/shopify-plus-experts.png';
-import bgCampfire from 'images/bg-campfire.jpg';
-import './ShopifyPlusExpertsPanel.scss';
+import bgImage from 'images/bg-campfire.jpg';
+import './ShopifySection.scss';
 
-const ShopifyPlusExpertsPanel = () => {
+const ShopifySection = () => {
   return (
     <div
-      className="ShopifyPlusExpertsPanel"
-      style={{ backgroundImage: `url(${bgCampfire})` }}
+      className="ShopifySection"
+      style={{ backgroundImage: `url(${bgImage})` }}
     >
       <Container>
-        <div className="ShopifyPlusExpertsPanel__logo">
+        <div className="ShopifySection__logo">
           <img src={shopifyPlusExperts} alt="Shopify Plus Experts" />
         </div>
         <IntroText>
@@ -27,4 +27,4 @@ const ShopifyPlusExpertsPanel = () => {
   );
 };
 
-export default ShopifyPlusExpertsPanel;
+export default ShopifySection;

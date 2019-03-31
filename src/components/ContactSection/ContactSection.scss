@@ -1,0 +1,12 @@
+@import '../../stylesheets/helpers.scss';
+
+.ContactSection {
+  @include vhc;
+  @include flex-direction(column);
+  min-height: 100vh;
+  background: {
+    size: cover;
+    repeat: no-repeat;
+    position: center center;
+  }
+}

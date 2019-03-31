@@ -1,8 +1,9 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+// import { StaticQuery, graphql } from 'gatsby';
+// import Img from 'gatsby-image';
 
 import Container from 'components/Container';
+import hero from 'images/hero.png';
 import roosterLogo from 'images/rooster-logo.svg';
 
 import './HeroSection.scss';
@@ -33,7 +34,8 @@ const HeroSection = () => {
         </Container>
       </div>
       <div className="hero">
-        <StaticQuery
+        <img src={hero} alt="" />
+        {/* <StaticQuery
           query={graphql`
             query {
               hero: file(relativePath: { eq: "hero.png" }) {
@@ -46,7 +48,7 @@ const HeroSection = () => {
             }
           `}
           render={data => <Img fluid={data.hero.childImageSharp.fluid} />}
-        />
+        /> */}
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import AboutSection from 'components/AboutSection';
 import ClientShowcase from 'components/ClientShowcase';
 import ContactSection from 'components/ContactSection';
 import ShopifySection from 'components/ShopifySection';
+import TestimonialsSection from 'components/TestimonialsSection';
 // assets
 import CLIENTS from 'constants/clients';
 
@@ -20,6 +21,7 @@ const IndexPage = () => (
     <ShopifySection />
     <ClientShowcase {...CLIENTS.august} />
     <ClientShowcase {...CLIENTS.zpacks} align="right" />
+    <TestimonialsSection />
     <ContactSection />
   </Layout>
 );

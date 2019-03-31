@@ -1,8 +1,12 @@
 @import '../../stylesheets/helpers.scss';
 
 .ContactSection {
-  @include vhc;
   @include flex-direction(column);
+
+  @media (min-width: 45em) {
+    @include vhc;
+  }
+
   position: relative;
   min-height: 100vh;
   background: {
@@ -57,5 +61,30 @@
       rgba(21, 21, 21, 1) 0%,
       rgba(21, 21, 21, 0) 100%
     );
+  }
+
+  &__inner {
+    position: relative;
+    text-align: center;
+
+    @media (min-width: 45em) {
+      top: -5vw;
+    }
+  }
+
+  &__title {
+    $fs: 64;
+    @include serif;
+    margin: 0 0 em(30, $fs);
+    font-size: em($fs);
+    line-height: (56 / $fs);
+  }
+
+  &__description {
+    $fs: 28;
+    @include serif;
+    margin: 0 0 em(60, $fs);
+    font-size: em($fs);
+    line-height: 1;
   }
 }

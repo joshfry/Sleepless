@@ -1,0 +1,70 @@
+@import '../../stylesheets/helpers.scss';
+
+.AboutSection {
+  min-height: 100vh;
+  padding-top: em(60);
+  padding-bottom: em(60);
+}
+
+/*
+  TODO: refactor this
+*/
+
+.ScopedTitle {
+  @include vhc;
+  @include sans-serif-bold;
+  $fs: 16;
+  position: relative;
+  margin: em(120, $fs) 0;
+  font-size: em($fs);
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  color: $primary;
+  min-height: em(200, $fs);
+
+  span {
+    position: relative;
+    padding-top: em(20, $fs);
+    padding-bottom: em(20, $fs);
+    background-color: $black;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    width: 1px;
+    margin-left: -1px; // should be half of width but that would be .5px
+    background-color: $white;
+  }
+}
+
+.ScopedGood {
+  @include vhc;
+  @include flex-direction(column);
+  height: em(200);
+  text-align: center;
+
+  &__image {
+    width: em(80);
+    height: em(80);
+    max-height: 100%;
+    margin-bottom: em(40);
+    background: {
+      size: contain;
+      position: center center;
+      repeat: no-repeat;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: em(14);
+    line-height: 1.428571428571429; // 20px == 20 / 14
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    color: $primary;
+  }
+}

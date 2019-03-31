@@ -1,0 +1,122 @@
+@import '../../stylesheets/helpers.scss';
+
+/*
+  TODO: refactor class names here
+*/
+
+.HeroSection {
+  min-height: 100vh;
+  padding-top: em(60);
+  padding-bottom: em(60);
+
+  @include flex-direction(column);
+  background: {
+    image: url(../../images/starry-bg.jpg);
+    size: cover;
+    position: center center;
+    repeat: no-repeat;
+    color: #223549;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: em(240);
+    background: -moz-linear-gradient(
+      top,
+      rgba(21, 21, 21, 1) 0%,
+      rgba(21, 21, 21, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(21, 21, 21, 1) 0%,
+      rgba(21, 21, 21, 0) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(21, 21, 21, 1) 0%,
+      rgba(21, 21, 21, 0) 100%
+    );
+  }
+}
+
+.brand-statement {
+  position: relative;
+  padding-top: em(50);
+}
+
+.hero {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.rooster-logo {
+  @include vhc;
+  padding-top: em(20);
+  padding-bottom: em(20);
+}
+
+.lettering {
+  @include flexbox;
+  @include flex-direction(column);
+  text-align: center;
+
+  &__lineOne {
+    @include order(1);
+  }
+  &__lineTwo {
+    @include order(2);
+  }
+  &__lineThree {
+    @include order(3);
+  }
+
+  &__big {
+    @include serif;
+    margin: 0;
+    padding-top: 21px; // account for fancy borders
+    padding-bottom: 21px; // account for fancy borders
+    font-size: em(68);
+    line-height: 1.08825;
+    letter-spacing: 0.75px;
+
+    span {
+      display: inline-block;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        height: 1px;
+        background-color: $primary;
+      }
+
+      &:before {
+        top: -20px;
+      }
+
+      &:after {
+        bottom: -20px;
+      }
+    }
+  }
+
+  &__small {
+    $fs: 18;
+    @include serif;
+    padding-top: em(20, $fs);
+    padding-bottom: em(20, $fs);
+    font-size: em($fs);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+}

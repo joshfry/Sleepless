@@ -1,0 +1,8 @@
+@import '../../stylesheets/helpers.scss';
+
+.IntroText {
+  @include serif;
+  font-size: em(32);
+  line-height: 1.5625;
+  text-align: center;
+}

@@ -5,9 +5,11 @@ import Img from 'gatsby-image';
 import Container from 'components/Container';
 import roosterLogo from 'images/rooster-logo.svg';
 
+import './HeroSection.scss';
+
 const HeroSection = () => {
   return (
-    <div className="section section--fullHeight section--one">
+    <div className="HeroSection">
       <div className="brand-statement">
         <Container>
           <div className="rooster-logo">
@@ -43,9 +45,7 @@ const HeroSection = () => {
               }
             }
           `}
-          render={data => (
-            <Img fluid={data.hero.childImageSharp.fluid} fadeIn={false} />
-          )}
+          render={data => <Img fluid={data.hero.childImageSharp.fluid} />}
         />
       </div>
     </div>

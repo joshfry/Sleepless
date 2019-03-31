@@ -1,23 +1,26 @@
 import React from 'react';
-
+// components
 import Container from 'components/Container';
+import IntroText from 'components/IntroText';
+// assets
 import iconBrand from 'images/icon-brand.png';
 import iconCms from 'images/icon-cms.png';
 import iconContent from 'images/icon-content.png';
 import iconDesign from 'images/icon-design.png';
 import iconShop from 'images/icon-shop.png';
+import './AboutSection.scss';
 
 const AboutSection = () => {
   return (
-    <div className="section section--fullHeight section--padded">
+    <div className="AboutSection">
       <Container>
-        <p className="intro">
+        <IntroText>
           We’re an outdoor-loving, music-rocking, coffee-inhaling web design and
           branding agency based in Santa Cruz, California. We’re super serious
           about our work, but ourselves? Nahhhh… not so much.
-        </p>
+        </IntroText>
 
-        <h2 className="h2">
+        <h2 className="ScopedTitle">
           <span>Scope out the Goods</span>
         </h2>
 

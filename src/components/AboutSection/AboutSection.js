@@ -20,68 +20,66 @@ const AboutSection = () => {
           about our work, but ourselves? Nahhhh… not so much.
         </IntroText>
 
-        <h2 className="ScopedTitle">
+        <h2 className="AboutSection__title">
           <span>Scope out the Goods</span>
         </h2>
 
-        <div className="Scoped">
-          <div className="grid grid--5-col">
-            <div className="grid__item">
-              <div className="ScopedGood">
-                <div
-                  className="ScopedGood__image"
-                  style={{ backgroundImage: `url(${iconDesign})` }}
-                />
-                <h4 className="ScopedGood__title">
-                  Website
-                  <br />
-                  Design
-                </h4>
-              </div>
+        <div className="AboutSection__services">
+          <div className="AboutSection__services__item">
+            <div className="Service">
+              <div
+                className="Service__image"
+                style={{ backgroundImage: `url(${iconDesign})` }}
+              />
+              <h4 className="Service__title">
+                Website
+                <br />
+                Design
+              </h4>
             </div>
-            <div className="grid__item">
-              <div className="ScopedGood">
-                <div
-                  className="ScopedGood__image"
-                  style={{ backgroundImage: `url(${iconShop})` }}
-                />
-                <h4 className="ScopedGood__title">
-                  Shopify
-                  <br />
-                  Ecommerce
-                </h4>
-              </div>
+          </div>
+          <div className="AboutSection__services__item">
+            <div className="Service">
+              <div
+                className="Service__image"
+                style={{ backgroundImage: `url(${iconShop})` }}
+              />
+              <h4 className="Service__title">
+                Shopify
+                <br />
+                Ecommerce
+              </h4>
             </div>
-            <div className="grid__item">
-              <div className="ScopedGood">
-                <div
-                  className="ScopedGood__image"
-                  style={{ backgroundImage: `url(${iconCms})` }}
-                />
-                <h4 className="ScopedGood__title">Wordpress</h4>
-              </div>
+          </div>
+          <div className="AboutSection__services__item">
+            <div className="Service">
+              <div
+                className="Service__image"
+                style={{ backgroundImage: `url(${iconCms})` }}
+              />
+              <h4 className="Service__title">Wordpress</h4>
             </div>
-            <div className="grid__item">
-              <div className="ScopedGood">
-                <div
-                  className="ScopedGood__image"
-                  style={{ backgroundImage: `url(${iconBrand})` }}
-                />
-                <h4 className="ScopedGood__title">Branding</h4>
-              </div>
+          </div>
+          <div className="AboutSection__services__item">
+            <div className="Service">
+              <div
+                className="Service__image"
+                style={{ backgroundImage: `url(${iconBrand})` }}
+              />
+              <h4 className="Service__title">Branding</h4>
             </div>
-            <div className="grid__item">
-              <div className="ScopedGood">
-                <div
-                  className="ScopedGood__image"
-                  style={{ backgroundImage: `url(${iconContent})` }}
-                />
-                <h4 className="ScopedGood__title">
-                  Content
-                  <br />
-                  Creation
-                </h4>
-              </div>
+          </div>
+          <div className="AboutSection__services__item">
+            <div className="Service">
+              <div
+                className="Service__image"
+                style={{ backgroundImage: `url(${iconContent})` }}
+              />
+              <h4 className="Service__title">
+                Content
+                <br />
+                Creation
+              </h4>
             </div>
           </div>
         </div>

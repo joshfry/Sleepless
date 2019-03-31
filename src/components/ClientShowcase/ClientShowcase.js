@@ -18,23 +18,20 @@ const ClientShowcase = props => {
     align,
     productAlign,
     style,
+    className,
   } = props;
 
-  let alignClassName = `ClientShowcase--left`;
-  if (align === `right`) {
-    alignClassName = `ClientShowcase--right`;
-  }
-
-  let productAlignClassName = ``;
-  if (productAlign === `top`) {
-    productAlignClassName = `ClientShowcase--productAlignTop`;
-  }
-
-  let bgImageStyle = {};
-  if (bgImage) bgImageStyle = { backgroundImage: `url(${bgImage})` };
+  const alignClassName =
+    align === `right` ? `ClientShowcase--right` : `ClientShowcase--left`;
+  const productAlignClassName =
+    productAlign === `top` ? `ClientShowcase--productAlignTop` : ``;
+  const bgImageStyle = bgImage ? { backgroundImage: `url(${bgImage})` } : {};
 
   return (
-    <div className="ClientShowcase__bgImage" style={bgImageStyle}>
+    <div
+      className={`ClientShowcase__wrapper ${className}`}
+      style={bgImageStyle}
+    >
       <Container>
         <div
           className={`ClientShowcase ${alignClassName} ${productAlignClassName}`}
@@ -85,6 +82,7 @@ ClientShowcase.propTypes = {
   align: PropTypes.string,
   productAlign: PropTypes.string,
   style: PropTypes.object, // eslint-disable-line
+  className: PropTypes.string,
 };
 
 ClientShowcase.defaultProps = {
@@ -93,6 +91,7 @@ ClientShowcase.defaultProps = {
   align: `left`,
   productAlign: `bottom`,
   style: {},
+  className: ``,
 };
 
 export default ClientShowcase;

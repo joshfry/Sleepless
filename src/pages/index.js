@@ -20,8 +20,7 @@ const IndexPage = () => (
     <ClientShowcase {...CLIENTS.lumecube} align="right" productAlign="top" />
     <ShopifySection />
     <ClientShowcase {...CLIENTS.august} />
-    <div className="starsBg" />
-    <ClientShowcase {...CLIENTS.zpacks} align="right" />
+    <ClientShowcase {...CLIENTS.zpacks} align="right" className="starsBg" />
     <TestimonialsSection />
     <ContactSection />
   </Layout>

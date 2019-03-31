@@ -5,6 +5,14 @@
   padding-top: em(160);
   padding-bottom: em(160);
 
+  &__wrapper {
+    background: {
+      size: contain;
+      repeat: no-repeat;
+      position: center bottom;
+    }
+  }
+
   &--left &__content {
     @include order(1);
     padding-right: em(80);
@@ -67,13 +75,5 @@
 
   &__builtOn {
     max-width: em(150);
-  }
-
-  &__bgImage {
-    background: {
-      size: contain;
-      repeat: no-repeat;
-      position: center bottom;
-    }
   }
 }

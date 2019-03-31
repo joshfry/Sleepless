@@ -4,92 +4,107 @@
   min-height: 100vh;
   padding-top: em(60);
   padding-bottom: em(60);
-}
 
-/*
-  TODO: refactor this
-*/
-
-.ScopedTitle {
-  @include vhc;
-  @include sans-serif-bold;
-  $fs: 16;
-  position: relative;
-  margin: em(120, $fs) 0;
-  font-size: em($fs);
-  text-transform: uppercase;
-  letter-spacing: 3.5px;
-  color: $primary;
-  min-height: em(200, $fs);
-
-  span {
+  &__title {
+    @include vhc;
+    @include sans-serif-bold;
+    $fs: 16;
     position: relative;
-    padding-top: em(20, $fs);
-    padding-bottom: em(20, $fs);
-    // background-color: $black;
-  }
+    margin: em(120, $fs) 0;
+    font-size: em($fs);
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    color: $primary;
+    min-height: em(200, $fs);
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    bottom: 70%;
-    width: 1px;
-    margin-left: -1px; // should be half of width but that would be .5px
-    background-color: $white;
-  }
+    span {
+      position: relative;
+      padding-top: em(20, $fs);
+      padding-bottom: em(20, $fs);
+      // background-color: $black;
+    }
 
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    top: 70%;
-    width: 1px;
-    margin-left: -1px; // should be half of width but that would be .5px
-    background-color: $white;
-  }
-}
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      bottom: 70%;
+      width: 1px;
+      margin-left: -1px; // should be half of width but that would be .5px
+      background-color: $white;
+    }
 
-.Scoped {
-  &:before {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-top: -60vh;
-    height: 200vh;
-    background: {
-      image: url(../../images/starry-bg-1.jpg);
-      size: cover;
-      position: center top;
-      repeat: no-repeat;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      top: 70%;
+      width: 1px;
+      margin-left: -1px; // should be half of width but that would be .5px
+      background-color: $white;
     }
   }
 
-  &:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-top: 150vh;
-    height: 150vh;
-    background: {
-      image: url(../../images/starry-bg-2.jpg);
-      size: cover;
-      position: center center;
-      repeat: no-repeat;
+  &__services {
+    &:before {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-top: -60vh;
+      height: 200vh;
+      background: {
+        image: url(../../images/starry-bg-1.jpg);
+        size: cover;
+        position: center top;
+        repeat: no-repeat;
+      }
+    }
+
+    &:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-top: 150vh;
+      height: 150vh;
+      background: {
+        image: url(../../images/starry-bg-2.jpg);
+        size: cover;
+        position: center center;
+        repeat: no-repeat;
+      }
+    }
+
+    @include flexbox;
+    @include flex-wrap(wrap);
+
+    @media (min-width: 50em) {
+      @include flexbox;
+    }
+
+    &__item {
+      @include flex(50%);
+
+      @media (min-width: 40em) {
+        @include flex(33.333%);
+      }
+
+      @media (min-width: 55em) {
+        @include flex(1);
+      }
     }
   }
 }
 
-.ScopedGood {
+.Service {
   @include vhc;
   @include flex-direction(column);
-  height: em(200);
+  padding: em(20) 0;
   text-align: center;
 
   &__image {

@@ -10,29 +10,28 @@ import './HeroSection.scss';
 const HeroSection = () => {
   return (
     <div className="HeroSection">
-      <div className="brand-statement">
-        <Container>
-          <div className="rooster-logo">
-            <img src={roosterLogo} alt="Sleepless Media logo" />
-          </div>
-          <div className="lettering">
-            <h1 className="lettering__big lettering__lineTwo">
-              <span>
-                Authentic, Memorable
-                <br />
-                Digital Experiences
-              </span>
-            </h1>
-            <span className="lettering__small lettering__lineOne">
-              We design, develop and nurture
+      <Container>
+        <div className="HeroSection__logo">
+          <img src={roosterLogo} alt="Sleepless Media logo" />
+        </div>
+        <div className="Lettering">
+          <h1 className="Lettering__big Lettering__lineTwo">
+            <span>
+              Authentic, Memorable
+              <br />
+              Digital Experiences
             </span>
-            <span className="lettering__small lettering__lineThree">
-              custom solutions built for results
-            </span>
-          </div>
-        </Container>
-      </div>
-      <div className="hero">
+          </h1>
+          <span className="Lettering__small Lettering__lineOne">
+            We design, develop and nurture
+          </span>
+          <span className="Lettering__small Lettering__lineThree">
+            custom solutions built for results
+          </span>
+        </div>
+      </Container>
+
+      <div className="HeroSection__image">
         <StaticQuery
           query={graphql`
             query {

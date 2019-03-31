@@ -2,7 +2,12 @@
 
 .IntroText {
   @include serif;
-  font-size: em(32);
+  font-size: 6vw;
+
+  @media (min-width: 35em) {
+    font-size: em(32);
+  }
+
   line-height: 1.5625;
   text-align: center;
 }

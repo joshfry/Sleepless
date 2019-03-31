@@ -36,6 +36,11 @@
     margin-bottom: em(60);
   }
 
+  &--productAlignTop &__productImg {
+    margin-top: em(60);
+    margin-bottom: auto;
+  }
+
   &__title {
     @include serif;
     $fs: 56;
@@ -62,5 +67,13 @@
 
   &__builtOn {
     max-width: em(150);
+  }
+
+  &__bgImage {
+    background: {
+      size: contain;
+      repeat: no-repeat;
+      position: center bottom;
+    }
   }
 }

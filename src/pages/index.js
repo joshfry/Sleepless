@@ -17,7 +17,7 @@ const IndexPage = () => (
     <HeroSection />
     <AboutSection />
     <ClientShowcase {...CLIENTS.tepui} style={{ paddingTop: `60px` }} />
-    <ClientShowcase {...CLIENTS.lumecube} align="right" />
+    <ClientShowcase {...CLIENTS.lumecube} align="right" productAlign="top" />
     <ShopifySection />
     <ClientShowcase {...CLIENTS.august} />
     <ClientShowcase {...CLIENTS.zpacks} align="right" />

@@ -14,43 +14,63 @@ const ClientShowcase = props => {
     builtOn,
     screenshot,
     productImg,
+    bgImage,
     align,
+    productAlign,
     style,
   } = props;
 
   let alignClassName = `ClientShowcase--left`;
-  if (align === `right`) alignClassName = `ClientShowcase--right`;
+  if (align === `right`) {
+    alignClassName = `ClientShowcase--right`;
+  }
+
+  let productAlignClassName = ``;
+  if (productAlign === `top`) {
+    productAlignClassName = `ClientShowcase--productAlignTop`;
+  }
+
+  let bgImageStyle = {};
+  if (bgImage) bgImageStyle = { backgroundImage: `url(${bgImage})` };
 
   return (
-    <Container>
-      <div className={`ClientShowcase ${alignClassName}`} style={style}>
-        <div className="ClientShowcase__content">
-          <h3 className="ClientShowcase__title">{clientName}</h3>
-          <p className="ClientShowcase__description">{projectDescription}</p>
-          <div className="ClientShowcase__actions">
-            <div className="ClientShowcase__projectUrl">
-              <Link className="btn" to={projectUrl}>
-                View Project
-              </Link>
+    <div className="ClientShowcase__bgImage" style={bgImageStyle}>
+      <Container>
+        <div
+          className={`ClientShowcase ${alignClassName} ${productAlignClassName}`}
+          style={style}
+        >
+          <div className="ClientShowcase__content">
+            <h3 className="ClientShowcase__title">{clientName}</h3>
+            <p className="ClientShowcase__description">{projectDescription}</p>
+            <div className="ClientShowcase__actions">
+              <div className="ClientShowcase__projectUrl">
+                <Link className="btn" to={projectUrl}>
+                  View Project
+                </Link>
+              </div>
+              <div className="ClientShowcase__builtOn">
+                <ShopifyBadge type={builtOn} />
+              </div>
             </div>
-            <div className="ClientShowcase__builtOn">
-              <ShopifyBadge type={builtOn} />
-            </div>
+            {productImg ? (
+              <div className="ClientShowcase__productImg">
+                <img
+                  src={withPrefix(productImg)}
+                  alt={`${clientName} product`}
+                />
+              </div>
+            ) : null}
           </div>
-          {productImg ? (
-            <div className="ClientShowcase__productImg">
-              <img src={withPrefix(productImg)} alt={`${clientName} product`} />
-            </div>
-          ) : null}
+          <div className="ClientShowcase__screenshot">
+            <img
+              src={withPrefix(screenshot)}
+              alt={`${clientName} website screenshot`}
+            />
+          </div>
         </div>
-        <div className="ClientShowcase__screenshot">
-          <img
-            src={withPrefix(screenshot)}
-            alt={`${clientName} website screenshot`}
-          />
-        </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 
@@ -61,13 +81,17 @@ ClientShowcase.propTypes = {
   builtOn: PropTypes.string.isRequired,
   screenshot: PropTypes.string.isRequired,
   productImg: PropTypes.string,
+  bgImage: PropTypes.string,
   align: PropTypes.string,
+  productAlign: PropTypes.string,
   style: PropTypes.object, // eslint-disable-line
 };
 
 ClientShowcase.defaultProps = {
   productImg: ``,
+  bgImage: ``,
   align: `left`,
+  productAlign: `bottom`,
   style: {},
 };
 

@@ -7,6 +7,7 @@ const CLIENTS = {
     builtOn: 'shopify-plus',
     screenshot: '/tepui-screenshot.jpg',
     productImg: '/tepui-product-image.png',
+    bgImage: '',
   },
   lumecube: {
     clientName: 'Lumecube',
@@ -16,6 +17,7 @@ const CLIENTS = {
     builtOn: 'shopify',
     screenshot: '/lumecube-screenshot.jpg',
     productImg: '/lumecube-product-image.png',
+    bgImage: 'bg-ice.jpg',
   },
   august: {
     clientName: 'August',
@@ -25,6 +27,7 @@ const CLIENTS = {
     builtOn: 'shopify-plus',
     screenshot: '/august-screenshot.jpg',
     productImg: '/august-product-image.png',
+    bgImage: '',
   },
   zpacks: {
     clientName: 'Zpacks',
@@ -34,6 +37,7 @@ const CLIENTS = {
     builtOn: 'shopify',
     screenshot: '/zpacks-screenshot.jpg',
     productImg: '',
+    bgImage: 'bg-mountains.jpg',
   },
 };
 

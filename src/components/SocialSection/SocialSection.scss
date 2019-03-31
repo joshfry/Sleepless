@@ -11,10 +11,14 @@
 
   &__networks {
     @include flexbox;
-    @include flex-direction(column);
+    @include flex-wrap(wrap);
 
-    @media (min-width: 40em) {
-      @include flex-direction(row);
+    &__item {
+      @include vhc;
+      @include flex-direction(column);
+      @include flex(1);
+      padding: em(30);
+      text-align: center;
     }
 
     &__title {
@@ -25,13 +29,6 @@
       color: $primary;
       text-transform: uppercase;
       letter-spacing: 2px;
-    }
-
-    &__item {
-      @include vhc;
-      @include flex-direction(column);
-      padding: em(30);
-      text-align: center;
     }
   }
 }

@@ -1,4 +1,4 @@
-export const CLIENTS = {
+const CLIENTS = {
   tepui: {
     clientName: 'Tepui',
     projectDescription:
@@ -36,3 +36,5 @@ export const CLIENTS = {
     productImg: '',
   },
 };
+
+export default CLIENTS;

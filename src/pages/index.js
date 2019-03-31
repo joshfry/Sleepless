@@ -9,7 +9,7 @@ import ContactSection from 'components/ContactSection';
 import ShopifySection from 'components/ShopifySection';
 import TestimonialsSection from 'components/TestimonialsSection';
 // assets
-import CLIENTS from 'constants/clients';
+import CLIENTS from 'data/clients';
 
 const IndexPage = () => (
   <Layout>

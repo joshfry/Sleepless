@@ -1,0 +1,14 @@
+@import '../../stylesheets/helpers.scss';
+
+.SectionTitle {
+  $fs: 36;
+  @include serif;
+  margin: em(180, $fs) 0 em(60, $fs);
+  font-size: em($fs);
+  line-height: 1;
+  text-align: center;
+
+  span {
+    color: $primary;
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 // components
 import Container from 'components/Container';
+import SectionTitle from 'components/SectionTitle';
 // assets
 import clientGrid from 'images/client-grid.png';
 import moreFriends from 'images/more-friends.png';
@@ -10,10 +11,13 @@ const TestimonialsSection = () => {
   return (
     <div className="TestimonialsSection">
       <Container>
-        <h2>Some friends we’ve made along the way.</h2>
+        <SectionTitle text="Some friends we&rsquo;ve made along the way." />
         <img src={clientGrid} alt="Our clients" />
-        <h2>Yeah, there’s more…</h2>
+        <SectionTitle>
+          Yeah, <span>there’s more…</span>
+        </SectionTitle>
         <img src={moreFriends} alt="More friends" />
+        <button className="TestimonialsSection__viewAllBtn">View All</button>
       </Container>
     </div>
   );

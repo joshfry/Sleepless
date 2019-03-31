@@ -6,7 +6,6 @@
 
 .HeroSection {
   @include flex-direction(column);
-
   position: relative;
   min-height: 100vh;
   padding-bottom: em(60);

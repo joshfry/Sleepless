@@ -8,9 +8,7 @@ const ContactSection = () => {
     <div
       className="ContactSection"
       style={{ backgroundImage: `url(${bgImage})` }}
-    >
-      <h1>ContactSection</h1>
-    </div>
+    />
   );
 };
 

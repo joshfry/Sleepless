@@ -4,9 +4,9 @@ $gray: #595959 !default;
 
 .Footer {
   @include vhc;
+  @include flex-direction(column);
   box-sizing: content-box;
-  padding-bottom: 20px;
-  min-height: em(80);
+  padding: em(60) 0;
   text-align: center;
 
   &__copy {

@@ -1,0 +1,37 @@
+@import '../../stylesheets/helpers.scss';
+
+.SocialSection {
+  &__title {
+    @include serif;
+    font-size: em(32);
+    line-height: 1;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  &__networks {
+    @include flexbox;
+    @include flex-direction(column);
+
+    @media (min-width: 40em) {
+      @include flex-direction(row);
+    }
+
+    &__title {
+      $fs: 14;
+      @include sans-serif-bold;
+      margin: em(20, $fs) 0 0;
+      font-size: em($fs);
+      color: $primary;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    &__item {
+      @include vhc;
+      @include flex-direction(column);
+      padding: em(30);
+      text-align: center;
+    }
+  }
+}

@@ -57,6 +57,19 @@
     right: 0;
     bottom: 0;
     pointer-events: none;
+
+    background: url(../../images/hero@1x.png) no-repeat center top;
+    background-size: cover;
+    height: 0;
+    padding-bottom: 75%;
+
+    @media (min-width: 40em) {
+      padding-bottom: 34.7222222222222%;
+    }
+
+    @media (min-width: 90em) {
+      padding-bottom: 29%;
+    }
   }
 }
 

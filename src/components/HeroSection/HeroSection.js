@@ -30,23 +30,7 @@ const HeroSection = () => {
           </span>
         </div>
       </Container>
-
-      <div className="HeroSection__image">
-        <StaticQuery
-          query={graphql`
-            query {
-              hero: file(relativePath: { eq: "hero@1-5x.png" }) {
-                childImageSharp {
-                  fluid(maxWidth: 1680) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-            }
-          `}
-          render={data => <Img fluid={data.hero.childImageSharp.fluid} />}
-        />
-      </div>
+      <div className="HeroSection__image" />
     </div>
   );
 };

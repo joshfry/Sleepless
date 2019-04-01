@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withPrefix, Link } from 'gatsby';
+import { Link } from 'gatsby';
 
 import Container from 'components/Container';
 import ShopifyBadge from 'components/ShopifyBadge';
@@ -52,18 +52,12 @@ const ClientShowcase = props => {
             </div>
             {productImg ? (
               <div className="ClientShowcase__productImg">
-                <img
-                  src={withPrefix(productImg)}
-                  alt={`${clientName} product`}
-                />
+                <img src={productImg} alt={`${clientName} product`} />
               </div>
             ) : null}
           </div>
           <div className="ClientShowcase__screenshot">
-            <img
-              src={withPrefix(screenshot)}
-              alt={`${clientName} website screenshot`}
-            />
+            <img src={screenshot} alt={`${clientName} website screenshot`} />
           </div>
         </div>
       </Container>

@@ -28,6 +28,13 @@ module.exports = {
         stylesheets: path.join(__dirname, 'src/stylesheets'),
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `t9uwpfcvnhcc`,
+        accessToken: `965b37725626823d159d0bf6b2a23d3b7dce42276c7a80f6e9123e0093d38e9c`,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

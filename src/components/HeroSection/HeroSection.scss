@@ -44,6 +44,31 @@
     );
   }
 
+  &:after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: em(60);
+    background: -moz-linear-gradient(
+      bottom,
+      rgba(21, 21, 21, 1) 0%,
+      rgba(21, 21, 21, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      bottom,
+      rgba(21, 21, 21, 1) 0%,
+      rgba(21, 21, 21, 0) 100%
+    );
+    background: linear-gradient(
+      to top,
+      rgba(21, 21, 21, 1) 0%,
+      rgba(21, 21, 21, 0) 100%
+    );
+  }
+
   &__logo {
     @include vhc;
     position: relative;

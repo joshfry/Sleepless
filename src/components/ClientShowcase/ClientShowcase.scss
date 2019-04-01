@@ -1,9 +1,5 @@
 @import '../../stylesheets/helpers.scss';
 
-$breakpoint: 50em;
-$onePixel: 0.0625em;
-$mobileOnly: $breakpoint - $onePixel;
-
 .ClientShowcase {
   padding-top: em(80);
   padding-bottom: em(80);

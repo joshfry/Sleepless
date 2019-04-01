@@ -3,7 +3,7 @@
 .HeroSection {
   @include flex-direction(column);
   position: relative;
-  padding-top: em(50);
+  // padding-top: em(50);
   padding-bottom: em(60);
   background: {
     image: url(../../images/starry-bg.jpg);
@@ -14,9 +14,11 @@
   }
 
   min-height: 85vh;
+  padding-top: 20vw;
 
   @media (min-width: 45em) {
     min-height: 100vh;
+    padding-top: 9vw;
   }
 
   &:before {

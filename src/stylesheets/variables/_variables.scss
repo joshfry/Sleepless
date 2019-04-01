@@ -1,5 +1,10 @@
 $showMediaQueries: false;
 
+// MEDIA QUERIES
+$breakpoint: 50em;
+$onePixel: 0.0625em;
+$mobileOnly: $breakpoint - $onePixel;
+
 // BASE
 $browserFontSize: 16;
 $baseFontSize: (16 / $browserFontSize) + em;

@@ -1,9 +1,55 @@
+@import '../../stylesheets/helpers.scss';
+
 .Header {
+  @include vc;
+  height: em(60);
+
+  @media (min-width: $breakpoint) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .Container {
+    @include vc;
+    height: 100%;
+    width: 100%;
+  }
+
   &__brand {
-    position: absolute;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    opacity: 0;
+    @media (max-width: $mobileOnly) {
+      max-width: 150px;
+      margin: 0 auto;
+    }
+  }
+
+  &__siteTitle {
+    @include hideText;
+  }
+
+  &__nav {
+    @media (max-width: $mobileOnly) {
+      @include vhc;
+    }
+
+    height: 100%;
+
+    @media (min-width: $breakpoint) {
+      margin-left: auto;
+    }
+
+    &__toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @media (min-width: $breakpoint) {
+        display: none;
+      }
+    }
   }
 }

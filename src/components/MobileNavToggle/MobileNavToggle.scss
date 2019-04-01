@@ -1,0 +1,13 @@
+@import '../../stylesheets/helpers.scss';
+
+.MobileNavToggle {
+  width: em(20);
+  padding: em(20);
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

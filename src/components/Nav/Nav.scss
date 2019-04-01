@@ -1,0 +1,64 @@
+@import '../../stylesheets/helpers.scss';
+
+.Nav {
+  @media (max-width: $mobileOnly) {
+    @include vhc;
+    @include flex-direction(column);
+    display: none; // toggle
+    position: fixed;
+    top: em(60);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $black;
+    z-index: 2;
+  }
+
+  @media (min-width: $breakpoint) {
+    @include vc;
+    position: relative;
+    right: em(-15);
+    height: 100%;
+  }
+
+  &__link {
+    @media (max-width: $mobileOnly) {
+      display: block;
+      padding: 2vw;
+      font-size: em(24);
+    }
+
+    @include sans-serif-bold;
+    text-decoration: none;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+
+    &:hover {
+      color: $primary;
+    }
+
+    @media (min-width: $breakpoint) {
+      @include vc;
+      height: 100%;
+      font-size: em(12);
+      padding: 0 em(5, 12);
+      letter-spacing: 1px;
+    }
+
+    @media (min-width: 55em) {
+      padding: 0 em(10, 12);
+      letter-spacing: 2px;
+    }
+
+    @media (min-width: 65em) {
+      font-size: em(14);
+      padding: 0 em(15, 14);
+    }
+
+    &--active {
+      color: $primary;
+    }
+  }
+}

@@ -1,15 +1,13 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-
+// components
 import Container from 'components/Container';
+// assets
 import roosterLogo from 'images/rooster-logo.svg';
-
 import './HeroSection.scss';
 
 const HeroSection = () => {
   return (
-    <div className="HeroSection">
+    <section id="hero" className="HeroSection">
       <Container>
         <div className="HeroSection__logo">
           <img src={roosterLogo} alt="Sleepless Media logo" />
@@ -31,7 +29,7 @@ const HeroSection = () => {
         </div>
       </Container>
       <div className="HeroSection__image" />
-    </div>
+    </section>
   );
 };
 

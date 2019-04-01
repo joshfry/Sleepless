@@ -6,7 +6,8 @@ import './ContactSection.scss';
 
 const ContactSection = () => {
   return (
-    <div
+    <section
+      id="contact"
       className="ContactSection"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
@@ -19,7 +20,7 @@ const ContactSection = () => {
           Let’s Pow Wow
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

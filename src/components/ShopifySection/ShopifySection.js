@@ -9,7 +9,8 @@ import './ShopifySection.scss';
 
 const ShopifySection = () => {
   return (
-    <div
+    <section
+      id="shopify"
       className="ShopifySection"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
@@ -23,7 +24,7 @@ const ShopifySection = () => {
           potential, we’re your spot.
         </IntroText>
       </Container>
-    </div>
+    </section>
   );
 };
 

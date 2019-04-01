@@ -10,8 +10,8 @@ const SocialSection = props => {
     <div className="SocialSection" style={style}>
       <h2 className="SocialSection__title">Stalk us in the wild</h2>
 
-      <div className="SocialSection__networks">
-        <div className="SocialSection__networks__item">
+      <ul className="SocialSection__networks">
+        <li className="SocialSection__networks__item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -27,8 +27,8 @@ const SocialSection = props => {
             </g>
           </svg>
           <h3 className="SocialSection__networks__title">Facebook</h3>
-        </div>
-        <div className="SocialSection__networks__item">
+        </li>
+        <li className="SocialSection__networks__item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -49,8 +49,8 @@ const SocialSection = props => {
             </g>
           </svg>
           <h3 className="SocialSection__networks__title">Instagram</h3>
-        </div>
-        <div className="SocialSection__networks__item">
+        </li>
+        <li className="SocialSection__networks__item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -66,8 +66,8 @@ const SocialSection = props => {
             </g>
           </svg>
           <h3 className="SocialSection__networks__title">Twitter</h3>
-        </div>
-        <div className="SocialSection__networks__item">
+        </li>
+        <li className="SocialSection__networks__item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
@@ -85,8 +85,8 @@ const SocialSection = props => {
             </g>
           </svg>
           <h3 className="SocialSection__networks__title">Dribbble</h3>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   );
 };

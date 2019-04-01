@@ -12,7 +12,7 @@ import './AboutSection.scss';
 
 const AboutSection = () => {
   return (
-    <div className="AboutSection">
+    <section id="about" className="AboutSection">
       <Container>
         <IntroText>
           We’re an outdoor-loving, music-rocking, coffee-inhaling web design and
@@ -84,7 +84,7 @@ const AboutSection = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 

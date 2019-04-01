@@ -9,7 +9,7 @@ import './TestimonialsSection.scss';
 
 const TestimonialsSection = () => {
   return (
-    <div className="TestimonialsSection">
+    <section id="testimonials" className="TestimonialsSection">
       <Container>
         <SectionTitle text="Some friends we&rsquo;ve made along the way." />
         <img src={clientGrid} alt="Our clients" />
@@ -21,7 +21,7 @@ const TestimonialsSection = () => {
           View All
         </button>
       </Container>
-    </div>
+    </section>
   );
 };
 

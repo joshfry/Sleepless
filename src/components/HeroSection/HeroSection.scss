@@ -3,7 +3,6 @@
 .HeroSection {
   @include flex-direction(column);
   position: relative;
-  min-height: 100vh;
   padding-top: em(50);
   padding-bottom: em(60);
   background: {
@@ -12,6 +11,12 @@
     position: center center;
     repeat: no-repeat;
     color: #223549;
+  }
+
+  min-height: 90vh;
+
+  @media (min-width: 45em) {
+    min-height: 100vh;
   }
 
   &:before {

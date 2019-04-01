@@ -9,11 +9,12 @@ const SectionTitle = props => {
 };
 
 SectionTitle.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   children: PropTypes.node,
 };
 
 SectionTitle.defaultProps = {
+  text: ``,
   children: null,
 };
 
